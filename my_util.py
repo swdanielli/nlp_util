@@ -248,7 +248,7 @@ def preprocess_content(content, stopwords, is_math=False, is_stemming=True, is_r
     math_words = get_math_words(content)
   # map simple equation to tokens
   if is_math:
-    content = simple_eq_to_text(content, is_math)
+    content = simple_eq_to_text(content)
   # remove punctuation
   content = "".join(l for l in content if l not in string.punctuation)
   content = content.lower()
